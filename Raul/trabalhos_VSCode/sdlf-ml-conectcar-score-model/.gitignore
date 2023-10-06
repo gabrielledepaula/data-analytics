@@ -1,0 +1,14 @@
+*.parquet
+*.csv
+*.checkpoint.ipynb
+*.checkpoint.md
+*.gitignore.swp
+*.ipynb_checkpoints
+notebooks/.ipynb_checkpoints
+*.joblib
+*.pyc
+*.json
+*.tsv
+*.21486
+*.tmp
+*.tfevents
