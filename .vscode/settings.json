@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "sdlf-cntcar-redshift-dev.capkkn406tig.us-east-2.redshift.amazonaws.com",
+            "port": 5439,
+            "askForPassword": true,
+            "driver": "Redshift Driver (Dedicated ver)",
+            "name": "conectcar",
+            "database": "conectcar",
+            "username": "raul_correa"
+        }
+    ]
+}
