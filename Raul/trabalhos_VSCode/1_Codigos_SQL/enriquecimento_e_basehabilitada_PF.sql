@@ -71,7 +71,6 @@ DROP TABLE IF EXISTS #tbl_cadastralpf1;
 
 ----------------------------------------------------------
 --- SELECIONANDO SOMENTE CLIENTES HABILITADOS CONECTCAR
----- 1º GRUPO DE CLIENTES PF PARA ENRIQUECIMENTO
 ----------------------------------------------------------
 
 drop table if exists #documentosHabilitados2023;
@@ -144,7 +143,7 @@ ultimoMesHabilitado,
 agregado,
 ROW_NUMBER () OVER
 (
-ORDER BY ultimoMesHabilitado
+ORDER BY ultimoMesHabilitado, documento desc
 ) as id_enriquecimento
 into #documentosHabilitados2023_v4
 from #documentosHabilitados2023_v3;
@@ -183,14 +182,10 @@ SELECT DISTINCT
 INTO #ONDA_1_ENRIQUECIMENTO
 FROM #tbl_cadastralpf as a 
 LEFT JOIN #documentosHabilitados2023_v4 as b
-ON a.documento = a.documento
-where b.ultimomeshabilitado is not null;
+ON a.documento = b.documento
+where ultimomeshabilitado is not null
+;
 
-select * from #ONDA_1_ENRIQUECIMENTO limit 100
-
-
-
-
-
+select * from #ONDA_1_ENRIQUECIMENTO;
 
 
