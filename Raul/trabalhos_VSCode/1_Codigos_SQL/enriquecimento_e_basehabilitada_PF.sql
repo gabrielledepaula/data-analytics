@@ -184,8 +184,49 @@ FROM #tbl_cadastralpf as a
 LEFT JOIN #documentosHabilitados2023_v4 as b
 ON a.documento = b.documento
 where ultimomeshabilitado is not null
+order by id_enriquecimento asc
 ;
 
-select * from #ONDA_1_ENRIQUECIMENTO;
+DROP TABLE IF EXISTS #ONDA_1_RENDA;
+select distinct
+documento,
+faixaderendaserasa
+INTO #ONDA_1_RENDA
+from #ONDA_1_ENRIQUECIMENTO
+where faixaderendaserasa is NULL
+order by id_enriquecimento ASC;
 
+DROP TABLE IF EXISTS #ONDA_1_OCUPACAO;
+select distinct
+documento,
+ocupacaoserasa
+INTO #ONDA_1_OCUPACAO
+from #ONDA_1_ENRIQUECIMENTO
+where ocupacaoserasa is NULL
+order by id_enriquecimento ASC;
+
+---ENRIQUECENDO DEMAIS DOCUMENTOS QUE NAO ENTRARAM NA #ONDA_1_RENDA
+---UTILIZACAO DE CREDITOS
+
+DROP TABLE IF EXISTS #ONDA_1_RENDA_2;
+select distinct
+    A.DOCUMENTO,
+    A.faixaderendaserasa
+INTO #ONDA_1_RENDA_2
+FROM #tbl_cadastralpf AS a
+LEFT JOIN #ONDA_1_RENDA as B
+    on a.documento = b.documento
+    WHERE 
+    b.documento is null
+    AND A.faixaderendaserasa is null 
+    AND B.faixaderendaserasa is null;
+
+------------------------------------------
+----------- GRUPO PF HABILITADOS 2023 ----
+------------------- 1ª ONDA --------------
+----------------- SELECTS ----------------
+
+--SELECT * FROM #ONDA_1_RENDA LIMIT 700000;
+--SELECT * FROM #ONDA_1_OCUPACAO LIMIT 305000;
+--SELECT * FROM #ONDA_1_RENDA_2 LIMIT 598588;
 
