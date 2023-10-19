@@ -2,6 +2,7 @@
 Repositório privado e exclusivo para o time de Analytics da ConectCar
 
 Bem vindo ao ambiente do time de Data analytics!
+
 Caso vá retirar/utilizar código leia o ReadMe contido nas pastas dos códigos, para verificar se existe alguma específicação antes de utilizar dos códigos. 
 Se for adicionar código, por favor, pratique boas praticas (sem base, teste, ou qualquer coisa do genero no nome de arquivos, cte's e tabelas temporárias; identação correta nos códigos,comentários...).
 
