@@ -10,5 +10,7 @@ Lembre-se de manter pastas organizadas por setor e por título de atividade. Ex:
 Dentro das pastas a organização fica da forma que achar melhor (desde que exista uma organização!).
 
 Bom proveito! Para dúvidas, a enciclopédia da Conectcar pode te ajudar! 
+
 Link da enciclopédia: https://conectcar-data-analytics.atlassian.net/wiki/spaces/DA/overview
+
 Link da enciclopédia humana: wesley.sousa@conectcar.com
