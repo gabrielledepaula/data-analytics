@@ -9,4 +9,6 @@ Se for adicionar código, por favor, pratique boas praticas (sem base, teste, ou
 Lembre-se de manter pastas organizadas por setor e por título de atividade. Ex: Atacado -> Estudo da carteira PJ Conectcar
 Dentro das pastas a organização fica da forma que achar melhor (desde que exista uma organização!).
 
-Bom proveito! Para dúvidas, a enciclopédia da Conectcar pode te ajudar! Link da enciclopédia: wesley.sousa@conectcar.com
+Bom proveito! Para dúvidas, a enciclopédia da Conectcar pode te ajudar! 
+Link da enciclopédia: https://conectcar-data-analytics.atlassian.net/wiki/spaces/DA/overview
+Link da enciclopédia humana: wesley.sousa@conectcar.com
