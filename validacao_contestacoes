@@ -1,0 +1,8 @@
+SELECT
+    EXTRACT(month FROM datacadastro) AS mes_cadastro
+    ,EXTRACT(year FROM datacadastro) AS ano_cadastro
+    ,SUM(emanalise) emanalise
+    ,SUM(aprovada) aprovado
+    ,SUM(recusada) recusada
+FROM refined.main.tb_redshift_powerbi_ra_contestacoes
+GROUP BY 1,2
